@@ -51,7 +51,7 @@ public class ListenerImpUtility extends BaseClass implements IPathConstants,ITes
 		System.out.println("=====>" + testName + "<==Start==");
 		test = report.createTest(testName);
 		UtilityObjectClass.setTest(test);
-		test.log(Status.INFO, testName);
+//		test.log(Status.INFO, testName);
 		test.log(Status.INFO, testName+" <Started>");
 	}
 
@@ -65,9 +65,9 @@ public class ListenerImpUtility extends BaseClass implements IPathConstants,ITes
 	@Override
 	public void onTestFailure(ITestResult result) {
 		String testName = result.getMethod().getMethodName();
-		String path = wLib.getScreenShot(sessionDriver, testName);
+		String path = wLib.getScreenShot(UtilityObjectClass.getDriver(), testName);
 		test.addScreenCaptureFromBase64String(path,testName);
-		test.log(Status.FAIL, testName);
+//		test.log(Status.FAIL, testName);
 		System.out.println("=====>" + testName + "<==Failed==");
 		test.log(Status.FAIL, testName+"<Failed>");
 	}

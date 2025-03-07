@@ -9,7 +9,9 @@ import org.openqa.selenium.support.PageFactory;
 import com.scm.qual.webdriverutility.WebDriverUtility;
 
 import junit.framework.Assert;
-
+/**
+ * @author RAJU
+ */
 public class MyOrdersPage {
 
 	@FindBy(xpath = "//h1[text()='My Orders']")
@@ -51,16 +53,32 @@ public class MyOrdersPage {
 		return searchBtn;
 	}
 
+	/**
+	 * @author RAJU
+	 * @param expected
+	 */
 	public void verifyMyOrdersHeaderMessage(String expected) {
 		String actHeader = getMyOrdersHeaderMessage().getText().trim();
 		Assert.assertEquals(actHeader, expected);
 	}
+	/**
+	 * @author RAJU
+	 * @param expectedStatus
+	 */
 	
 	public void verifyMyOrdersStatus(String expectedStatus) {
 		String actStatus = getMyOrderStatus().getText().trim();
 		Assert.assertEquals(actStatus, expectedStatus);
 	}
 
+	/**
+	 * @author RAJU
+	 * @param wLib
+	 * @param searchByText
+	 * @param driver
+	 * @param orderId
+	 * @param expStatus
+	 */
 
 	public void verifyOrderInMyOrders(WebDriverUtility wLib,String searchByText,WebDriver driver,String orderId,String expStatus) {
 		wLib.selectByVisibleText(getSearchByDd(), searchByText);
@@ -71,6 +89,15 @@ public class MyOrdersPage {
 		WebElement detailsLink = driver.findElement(By.xpath("//td[text()=' "+orderId+" ']/following-sibling::td/a[contains(text(),'Details')]"));
 		wLib.clickOnElementVaiJS(driver, detailsLink);
 	}
+	/**
+	 * @author RAJU
+	 * @param rhp
+	 * @param wLib
+	 * @param searchByText
+	 * @param driver
+	 * @param orderId
+	 * @param expStatus
+	 */
 	public void verifyOrderDetailsInMyOrders(RetailerHomePage rhp,WebDriverUtility wLib,String searchByText,WebDriver driver,String orderId,String expStatus) {
 		rhp.getMyOrdersMajorTab().click();
 		wLib.selectByVisibleText(getSearchByDd(), searchByText);

@@ -6,7 +6,9 @@ import com.scm.qual.basetest.BaseClass;
 import com.scm.qual.objectrepository.adminhomepage.AdminHomePage;
 import com.scm.qual.objectrepository.adminhomepage.ViewRetailerPage;
 import com.scm.qual.objectrepository.loginpage.LoginPage;
-
+/**
+ * @author RAJU
+ */
 public class RetailersTest extends BaseClass {
 	@Test
 	public void verifyRetailerTest() throws Throwable {

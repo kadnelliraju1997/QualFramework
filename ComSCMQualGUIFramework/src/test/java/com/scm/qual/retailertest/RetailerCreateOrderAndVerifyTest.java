@@ -8,7 +8,9 @@ import com.scm.qual.objectrepository.ratailerpage.MyOrdersPage;
 import com.scm.qual.objectrepository.ratailerpage.OrderDetailsPage;
 import com.scm.qual.objectrepository.ratailerpage.OrderItemsPage;
 import com.scm.qual.objectrepository.ratailerpage.RetailerHomePage;
-
+/**
+ * @author RAJU
+ */
 public class RetailerCreateOrderAndVerifyTest extends BaseClass {
 	
 	@Test

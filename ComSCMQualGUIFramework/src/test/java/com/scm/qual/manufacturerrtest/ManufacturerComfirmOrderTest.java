@@ -8,7 +8,9 @@ import com.scm.qual.objectrepository.manufacturerhomepage.ManufacturerHomePage;
 import com.scm.qual.objectrepository.manufacturerhomepage.OrdersPage;
 import com.scm.qual.objectrepository.ratailerpage.MyOrdersPage;
 import com.scm.qual.objectrepository.ratailerpage.RetailerHomePage;
-
+/**
+ * @author RAJU
+ */
 public class ManufacturerComfirmOrderTest extends BaseClass {
 
 	@Test

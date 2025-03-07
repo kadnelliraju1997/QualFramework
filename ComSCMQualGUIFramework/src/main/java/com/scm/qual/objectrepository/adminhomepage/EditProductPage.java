@@ -9,7 +9,9 @@ import org.openqa.selenium.support.PageFactory;
 import com.scm.qual.webdriverutility.WebDriverUtility;
 
 import junit.framework.Assert;
-
+/**
+ * @author RAJU
+ */
 public class EditProductPage {
 
 	@FindBy(xpath = "//input[@id='product:name']")
@@ -58,6 +60,14 @@ public class EditProductPage {
 		return productPriceTf;
 	}
 
+	/**
+	 * @param ahp
+	 * @param productNo
+	 * @param wLib
+	 * @param driver
+	 * @param updatePrice
+	 * @param productName
+	 */
 	public void editProduct(AdminHomePage ahp, String productNo, WebDriverUtility wLib, WebDriver driver,
 			String updatePrice, String productName) {
 		wLib.waitForVisibility(driver, ahp.getProductsMajorTab());

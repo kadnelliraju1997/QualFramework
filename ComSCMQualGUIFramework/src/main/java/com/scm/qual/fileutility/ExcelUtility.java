@@ -11,9 +11,18 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 
 import com.scm.qual.ipathconstants.IPathConstants;
-
+/**
+ * @author RAJU
+ */
 public class ExcelUtility implements IPathConstants {
 
+	/**
+	 * @author RAJU
+	 * @param sheetName
+	 * @param rowNo
+	 * @param cellNo
+	 * @return
+	 */
 	public String getDataFromExcelSheet(String sheetName, int rowNo, int cellNo) {
 		Workbook wb = null;
 		String data=null;
@@ -28,6 +37,14 @@ public class ExcelUtility implements IPathConstants {
 		return data;
 		
 	}
+	/**
+	 * @author RAJU
+	 * @param sheetName
+	 * @param rowNum
+	 * @param celNum
+	 * @return
+	 * @throws Throwable
+	 */
 
 	public String getDataFromExcel(String sheetName,int rowNum,int celNum) throws Throwable
 	{
@@ -36,6 +53,11 @@ public class ExcelUtility implements IPathConstants {
 		String data=wb.getSheet(sheetName).getRow(rowNum).getCell(celNum).getStringCellValue();
 		return data;
 	}
+	/**
+	 * @author RAJU
+	 * @param sheetName
+	 * @param l
+	 */
 	public void writeBackDataToExcel(String sheetName, ArrayList<String[]> l) {
 
 		Workbook wb = null;
@@ -65,6 +87,11 @@ public class ExcelUtility implements IPathConstants {
 		}
 	}
 
+	/**
+	 * @author RAJU
+	 * @param sheetName
+	 * @return
+	 */
 	public int getRowCountFromExcel(String sheetName) {
 		FileInputStream fis;
 		Workbook wb = null;
@@ -80,6 +107,9 @@ public class ExcelUtility implements IPathConstants {
 
 	}
 
+	/**
+	 * @author RAJU
+	 */
 	public void closeExcel() {
 		FileInputStream fis;
 		Workbook wb = null;
@@ -88,7 +118,6 @@ public class ExcelUtility implements IPathConstants {
 			wb = WorkbookFactory.create(fis);
 			wb.close();
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}

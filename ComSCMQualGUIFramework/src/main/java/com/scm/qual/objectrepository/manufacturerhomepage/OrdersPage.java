@@ -6,7 +6,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.scm.qual.webdriverutility.WebDriverUtility;
-
+/**
+ * @author RAJU
+ */
 public class OrdersPage {
 
 	@FindBy(xpath = "//a[@href='confirm_order.php?id=30']")
@@ -27,9 +29,14 @@ public class OrdersPage {
 		return invoiceLink;
 	}
 
+	/**
+	 * @author RAJU
+	 * @param mhp
+	 * @param driver
+	 * @param wLib
+	 */
 	public void confirmOrder(ManufacturerHomePage mhp, WebDriver driver, WebDriverUtility wLib) {
 		mhp.getOrdersMajorTab().click();
-//		op.getConfirmLink().click();
 		wLib.clickOnElementVaiJS(driver, getConfirmLink());
 		driver.navigate().back();
 
@@ -41,6 +48,13 @@ public class OrdersPage {
 		}
 
 	}
+	/**
+	 * @author RAJU
+	 * @param mhp
+	 * @param op
+	 * @param driver
+	 * @param wLib
+	 */
 
 	public void confirmOrderAndGenerateInvoice(ManufacturerHomePage mhp,OrdersPage op, WebDriver driver, WebDriverUtility wLib) {
 		mhp.getOrdersMajorTab().click();

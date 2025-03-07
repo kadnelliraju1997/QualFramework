@@ -12,7 +12,9 @@ import com.scm.qual.objectrepository.ratailerpage.OrderDetailsPage;
 import com.scm.qual.objectrepository.ratailerpage.OrderItemsPage;
 import com.scm.qual.objectrepository.ratailerpage.RetailerHomePage;
 import com.scm.qual.objectrepository.ratailerpage.RetailerMyInvoicePage;
-
+/**
+ * @author RAJU
+ */
 public class RetailerCreateOrderAndManufacturer_ApprovedTest extends BaseClass {
 @Test
 public void CreateOrderAndApproveOrderTest() throws Throwable {

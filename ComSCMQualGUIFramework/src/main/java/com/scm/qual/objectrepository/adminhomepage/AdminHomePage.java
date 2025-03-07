@@ -4,7 +4,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
+/**
+ * @author RAJU
+ */
 public class AdminHomePage {
 
 	@FindBy(xpath = "//a[text()='Home']")

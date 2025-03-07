@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" thread-count="5" parallel="tests">
+	<listeners>
+		<listener
+			class-name="com.scm.qual.listenerutility.ListenerImpUtility" />
+	</listeners>
+	<test  name="Test1">
+		<parameter name="BROWSER" value="chrome" />
+		<classes>
+			<class name="com.scm.qual.admintest.RetailersTest" />
+			
+		</classes>
+	</test> <!-- Test -->
+	<test  name="Test2">
+		<parameter name="BROWSER" value="chrome" />
+		<classes>
+			
+			<class
+				name="com.scm.qual.retailertest.RetailerCreateOrderAndVerifyTest" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

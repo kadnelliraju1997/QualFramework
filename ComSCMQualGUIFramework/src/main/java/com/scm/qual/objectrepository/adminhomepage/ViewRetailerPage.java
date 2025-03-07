@@ -5,7 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
-
+/**
+ * @author RAJU
+ */
 public class ViewRetailerPage {
 
 	@FindBy(xpath = "//h1[text()='View Retailer']")

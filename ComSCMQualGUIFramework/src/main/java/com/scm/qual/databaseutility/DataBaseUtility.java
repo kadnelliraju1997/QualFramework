@@ -7,11 +7,16 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 import com.mysql.cj.jdbc.Driver;
-
+/**
+ * @author RAJU
+ */
 public class DataBaseUtility {
 	public Connection conn;
 	public Statement state;
 
+	/**
+	 * @author RAJU
+	 */
 	public void connectToDatabase() {
 		try {
 			Driver driverRef = new Driver();
@@ -21,7 +26,11 @@ public class DataBaseUtility {
 			e.printStackTrace();
 		}
 	}
-
+	/**
+	 * @author RAJU
+	 * @param query
+	 * @return
+	 */
 	public ResultSet executeTheSelectQuery(String query) {
 		ResultSet set = null;
 		try {
@@ -33,6 +42,13 @@ public class DataBaseUtility {
 		}
 		return set;
 	}
+	
+	/**
+	 * @author RAJU
+	 * @param query
+	 * @return
+	 */
+
 
 	public int updateQuery(String query) {
 		int set = 0;
@@ -43,7 +59,9 @@ public class DataBaseUtility {
 		}
 		return set;
 	}
-
+/**
+ * @author RAJU
+ */
 	public void closeDatabase() {
 
 		try {

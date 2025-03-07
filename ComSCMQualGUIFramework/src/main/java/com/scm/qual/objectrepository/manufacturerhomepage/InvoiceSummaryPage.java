@@ -7,7 +7,9 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
 import com.scm.qual.webdriverutility.WebDriverUtility;
-
+/**
+ * @author RAJU
+ */
 public class InvoiceSummaryPage {
 
 	@FindBy(xpath = "//h1[normalize-space()='Invoice Summary']")
@@ -35,6 +37,13 @@ public class InvoiceSummaryPage {
 		return generateInvoiceBtn;
 	}
 
+	/**
+	 * @author RAJU
+	 * @param expInvoiceHeaderMsg
+	 * @param wLib
+	 * @param distributorName
+	 * @param driver
+	 */
 	public void verifyInvoiceHeaderMsgAndGenerateInvoice(String expInvoiceHeaderMsg,WebDriverUtility wLib,String distributorName,WebDriver driver) {
 		String expInvSumHeaderMag = getInvoiceSummaryHeaderMsg().getText().trim();
 		Assert.assertEquals(expInvSumHeaderMag, expInvoiceHeaderMsg);

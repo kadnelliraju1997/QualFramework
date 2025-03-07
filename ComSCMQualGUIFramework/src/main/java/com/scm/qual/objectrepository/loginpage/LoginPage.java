@@ -6,7 +6,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.scm.qual.webdriverutility.WebDriverUtility;
-
+/**
+ * @author RAJU
+ */
 public class LoginPage {
 	
 	WebDriverUtility wLib = new WebDriverUtility();
@@ -43,6 +45,12 @@ public class LoginPage {
 		return loginBtn;
 	}
 
+	/**
+	 * 
+	 * @param userName
+	 * @param passWord
+	 * @param text
+	 */
 	public void loginToApp(String userName,String passWord,String text) {
 		getUserNameTf().sendKeys(userName);
 		getPassWordTf().sendKeys(passWord);

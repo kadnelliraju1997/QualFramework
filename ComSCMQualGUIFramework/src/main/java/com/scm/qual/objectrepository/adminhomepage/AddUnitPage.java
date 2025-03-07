@@ -6,7 +6,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.scm.qual.webdriverutility.WebDriverUtility;
-
+/**
+ * @author RAJU
+ */
 public class AddUnitPage {
 
 	@FindBy(xpath = "//input[@id='unitName']")
@@ -34,6 +36,15 @@ public class AddUnitPage {
 		return addUnitBtn;
 	}
 
+	/**
+	 * 
+	 * @param ahp
+	 * @param driver
+	 * @param wLib
+	 * @param vup
+	 * @param unitName
+	 * @param uniDetails
+	 */
 	public void addUnit(AdminHomePage ahp, WebDriver driver, WebDriverUtility wLib, ViewUnitsPage vup, String unitName,
 			String uniDetails) {
 		ahp.getManageUnitBtn().click();

@@ -6,7 +6,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.scm.qual.webdriverutility.WebDriverUtility;
-
+/**
+ * @author RAJU
+ */
 public class AddCategoryPage {
 
 	
@@ -34,7 +36,15 @@ public class AddCategoryPage {
 	public WebElement getAddCategoryBtn() {
 		return AddCategoryBtn;
 	}
-	
+	/**
+	 * 
+	 * @param ahp
+	 * @param driver
+	 * @param wLib
+	 * @param vcp
+	 * @param categoryName
+	 * @param categoryDetails
+	 */
 	public void addCategory(AdminHomePage ahp,WebDriver driver,WebDriverUtility wLib,ViewCategoryPage vcp,String categoryName,String categoryDetails) {
 		wLib.waitForVisibility(driver,ahp.getManageCategoryBtn());
 		ahp.getManageCategoryBtn().click();

@@ -12,6 +12,9 @@ import com.scm.qual.objectrepository.adminhomepage.ViewCategoryPage;
 import com.scm.qual.objectrepository.adminhomepage.ViewUnitsPage;
 import com.scm.qual.objectrepository.loginpage.LoginPage;
 
+/**
+ * @author RAJU
+ */
 public class AddProductTest extends BaseClass {
 
 	@Test

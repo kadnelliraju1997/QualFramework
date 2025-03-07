@@ -1,5 +1,7 @@
 package com.scm.qual.objectrepository.adminhomepage;
-
+/**
+ * @author RAJU
+ **/
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -54,6 +56,16 @@ public class AddProductPage {
 	public WebElement getProductPriceTf() {
 		return productPriceTf;
 	}
+	/**
+	 * 
+	 * @param ahp
+	 * @param productName
+	 * @param productPrice
+	 * @param wLib
+	 * @param driver
+	 * @param unitName
+	 * @param categoryName
+	 */
 
 	public void addProduct(AdminHomePage ahp,String productName,String productPrice ,WebDriverUtility wLib,WebDriver driver,String unitName,String categoryName) {
 		ahp.getAddProductsBtn().click();

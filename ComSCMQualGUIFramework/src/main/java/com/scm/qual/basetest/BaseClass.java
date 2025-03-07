@@ -9,12 +9,16 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Parameters;
+
 import com.scm.qual.databaseutility.DataBaseUtility;
 import com.scm.qual.fileutility.ExcelUtility;
 import com.scm.qual.fileutility.FileUtility;
 import com.scm.qual.webdriverutility.UtilityObjectClass;
 import com.scm.qual.webdriverutility.WebDriverUtility;
-
+/**
+ * @author RAJU
+ */
 public class BaseClass {
 	public WebDriver driver;
 	public FileUtility fLib = new FileUtility();
@@ -27,11 +31,12 @@ public class BaseClass {
 		System.out.println("====>connect to db<====");
 //		dLib.connectToDatabase();
 	}
-
+	@Parameters("BROWSER")
 	@BeforeClass
-	public void launchBrower() {
+	public void launchBrower(String BROWSER) {
 		System.out.println("====>launchBrower<====");
-		String Browser = fLib.getDataFromPropetyFile("browser");
+//		String Browser = fLib.getDataFromPropetyFile("browser");
+		String Browser=BROWSER;
 		String url = fLib.getDataFromPropetyFile("url");
 		if (Browser.equals("chrome")) {
 			driver = new ChromeDriver();

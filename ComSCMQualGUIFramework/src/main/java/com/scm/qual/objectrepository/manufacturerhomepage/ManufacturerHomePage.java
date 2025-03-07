@@ -4,7 +4,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
+/**
+ * @author RAJU
+ */
 public class ManufacturerHomePage {
 
 	@FindBy(xpath = "//a[text()='Home']")
@@ -87,6 +89,9 @@ public class ManufacturerHomePage {
 		return logoutBtn;
 	}
 
+	/**
+	 * @author RAJU
+	 */
 	
 	public void logoutFromApp() {
 		getLogoutBtn().click();

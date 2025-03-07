@@ -9,7 +9,9 @@ import com.scm.qual.objectrepository.ratailerpage.MyOrdersPage;
 import com.scm.qual.objectrepository.ratailerpage.OrderItemsPage;
 import com.scm.qual.objectrepository.ratailerpage.RetailerHomePage;
 import com.scm.qual.objectrepository.ratailerpage.RetailerMyInvoicePage;
-
+/**
+ * @author RAJU
+ */
 public class MyInvoicesRetailerTest extends BaseClass {
 
 	@Test
